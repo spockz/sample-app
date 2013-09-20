@@ -80,9 +80,9 @@
         <executions>
           <execution>
             <id>copy-wars</id>
-            <phase><!-- EX: In what phase should this plugin be executed? --></phase>
+            <phase>package</phase>
             <goals>
-              <goal><!-- EX: what goal should be executed? --></goal>
+              <goal>copy</goal>
             </goals>
             <configuration>
               <stripVersion>true</stripVersion>
@@ -103,6 +103,12 @@
 	<dependencies>
     <!-- modules -->
     <!-- EX: add dependency for the sub module that delivers the war file as artifact  -->
+    	<dependency>
+    		<groupId>${project.groupId}</groupId>
+    		<artifactId>cd-service-war</artifactId>
+    		<version>1.0.0.0-SNAPSHOT</version>
+        <type>war</type>
+    	</dependency>
 
 		<!-- fitnesse -->
 		<dependency>
